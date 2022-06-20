@@ -1,3 +1,11 @@
+
+// In this project we use useState, assigning the original value to the number 0 and initially we created three buttons, one that decreases by 1, another that resets
+// the value to 0 and the other that increases by 1. Then we create a slightly more complex button, which increases by 1, the original value after two seconds using 
+// setTimeOut. The setTimeOut by definition receives two parameters, the first being the function to be executed and the second the value in milliseconds that should
+// be waited until executing the function defined as the first parameter. However, it is noticed that by simply assigning the value as a reference value of useState + 1,
+//  if you click more than 1x on the button before it is updated, it only increases by 1. In this case, the solution is to create a function passing the value previous 
+// (prevState) nd returning it + 1, thus solves the problem.
+
 import React, { useState } from 'react';
 
 const UseStateCounter = () => {
